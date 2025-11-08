@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="textarea/src/output.css">
+    <title>Textarea</title>
+</head>
+<body class="flex justify-center items-center min-h-screen m-0 p-5 box-border relative bg-cover"
+    style="background-image: url('https://images.unsplash.com/photo-1464618663641-bbdd760ae84a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070');">
+    <div class="main-container w-full max-w-2xl bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="tabs-container p-6">
+            <div class="tabs-nav flex border-b border-gray-200 items-center justify-center gap-2">
+                <button
+                    class="tab-link active bg-transparent border-none cursor-pointer py-3 px-4 text-base text-gray-500 border-b-2 border-transparent mb[1px] hover:text-gray-800 active text-black font-semibold border-black"
+                    data-tab="tab-1">First Tab</button>
+            </div>
+            <p class="instructions mt-6 mb-4 text-gray-800 leading-relaxed">
+                The dynamic textarea below should automatically adjust its height based on the content entered by the
+                user.
+            </p>
+            <div class="tabs-content mt-4">
+                <div id="tab-1" class="tab-panel active">
+                    <div
+                        class="content-box relative bg-white text-black p-2.5 rounded-xl text-center text-lg min-h-[120px] flex justify-center items-center box-border">
+                        <textarea maxlength="250" placeholder="Start typing..."
+                            class="w-full min-h-[150px] max-h-[400px] p-3 text-base text-black border border-gray-300 rounded-lg resize-none box-border"></textarea>
+                        <div class="current-counter absolute bottom-4 right-6 text-black font-semibold">
+                            <span class="current-count font-semibold">0</span>/250
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="textarea/src/script.js"></script>
+</body>
+
+</html>
